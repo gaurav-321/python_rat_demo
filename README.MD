@@ -23,5 +23,28 @@ Please note that this script should be used responsibly and only within legal an
 
 1. Clone this repository to your local machine.
 
-```bash
-git clone https://github.com/your-username/remote-control-python.git
+    ```bash
+    git clone https://github.com/your-username/remote-control-python.git
+
+2. Navigate to the repository directory.
+    ```bash
+    cd remote-control-python
+3. Modify the script's configuration:
+
+    Set the SERVER_HOST and SERVER_PORT variables to match your server's IP address and port.
+    
+    Configure email settings (if using keylogger email reporting).
+    
+4. Run the server script on your control machine:
+
+    ```bash
+    python server.py
+5. Run the client script on the target machine:
+    ```bash 
+    python client.py
+Follow the commands provided by the server script to control the target system remotely.
+## Disclaimer
+This script is provided for educational and research purposes only. The author is not responsible for any misuse, damage, or legal consequences resulting from the use of this script. Use at your own risk.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
