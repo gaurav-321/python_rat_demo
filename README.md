@@ -1,4 +1,6 @@
-### Summary of Python Files
+# Keylogger and System Monitoring Tools
+
+## Summary of Python Files
 
 1. **keylogger.py**
    - **Purpose**: Captures keyboard input.
@@ -50,84 +52,81 @@
     - **Dependencies**: `psutil`
     - **Output**: Lists process details (PID, name).
 
-### Detailed Breakdown
+## Features
 
-#### keylogger.py
-- **Functionality**:
-  - Captures all keystrokes using the `pynput.keyboard` library.
-  - Writes each keystroke to a log file.
-- **Dependencies**:
-  - `pynput.keyboard`: For capturing keyboard events.
+- Captures keyboard and mouse events
+- Screenshots the screen
+- Records video and audio
+- Captures webcam footage
+- Monitors clipboard changes
+- Retrieves system information
+- Lists files in directories
+- Captures network traffic
+- Monitors running processes
 
-#### mouse_logger.py
-- **Functionality**:
-  - Captures mouse movements and clicks using the `pynput.mouse` library.
-  - Uses `tkinter` for graphical display of mouse events.
-  - Writes event details to a log file.
-- **Dependencies**:
-  - `pynput.mouse`: For capturing mouse events.
-  - `tkinter`: For GUI elements.
+## Installation
 
-#### screenshot.py
-- **Functionality**:
-  - Captures the screen using `pyautogui`.
-  - Saves the screenshot as an image file.
-- **Dependencies**:
-  - `Pillow`: For image handling.
-  - `pyautogui`: For capturing the screen.
+To use these scripts, you need to have Python installed on your system. You can install the required dependencies using pip:
 
-#### video_recorder.py
-- **Functionality**:
-  - Records the screen and audio using `mss` for screen capture and `sounddevice` for audio recording.
-  - Saves the recorded data as a video file.
-- **Dependencies**:
-  - `mss`: For screen capture.
-  - `sounddevice`: For audio recording.
-  - `scipy.io.wavfile`: For handling WAV files.
+```bash
+pip install pynput Pillow pyautogui mss sounddevice scipy opencv-python pyperclip platform psutil scapy
+```
 
-#### webcam_capture.py
-- **Functionality**:
-  - Captures frames from a webcam using `opencv-python`.
-  - Saves the frames as images or videos.
-- **Dependencies**:
-  - `opencv-python`: For capturing video from the webcam.
+## Usage
 
-#### clipboard_monitor.py
-- **Functionality**:
-  - Monitors changes to the clipboard using `pyperclip`.
-  - Writes each change to a log file.
-- **Dependencies**:
-  - `pyperclip`: For accessing the clipboard.
+Each script is designed to perform a specific task. Here’s how you can run them:
 
-#### system_info.py
-- **Functionality**:
-  - Retrieves and prints system information using `platform` and `psutil`.
-- **Dependencies**:
-  - `platform`: For OS details.
-  - `psutil`: For CPU, memory usage.
+1. **keylogger.py**
+   ```bash
+   python keylogger.py
+   ```
 
-#### file_browser.py
-- **Functionality**:
-  - Lists files in a specified directory using `os` and `shutil`.
-- **Dependencies**:
-  - `os`: For navigating directories.
-  - `shutil`: For handling file operations.
+2. **mouse_logger.py**
+   ```bash
+   python mouse_logger.py
+   ```
 
-#### network_sniffer.py
-- **Functionality**:
-  - Captures network traffic using `scapy`.
-  - Logs each packet to a file.
-- **Dependencies**:
-  - `scapy`: For capturing network packets.
+3. **screenshot.py**
+   ```bash
+   python screenshot.py
+   ```
 
-#### process_monitor.py
-- **Functionality**:
-  - Monitors running processes using `psutil`.
-  - Lists details of each process.
-- **Dependencies**:
-  - `psutil`: For accessing process information.
+4. **video_recorder.py**
+   ```bash
+   python video_recorder.py
+   ```
 
-### Usage and Security Considerations
+5. **webcam_capture.py**
+   ```bash
+   python webcam_capture.py
+   ```
+
+6. **clipboard_monitor.py**
+   ```bash
+   python clipboard_monitor.py
+   ```
+
+7. **system_info.py**
+   ```bash
+   python system_info.py
+   ```
+
+8. **file_browser.py**
+   ```bash
+   python file_browser.py
+   ```
+
+9. **network_sniffer.py**
+   ```bash
+   python network_sniffer.py
+   ```
+
+10. **process_monitor.py**
+    ```bash
+    python process_monitor.py
+    ```
+
+## Security Considerations
 
 Each script is designed to perform a specific task that could be useful for system monitoring, automation, or malicious purposes. To use these scripts safely:
 
@@ -136,6 +135,6 @@ Each script is designed to perform a specific task that could be useful for syst
 3. **Monitor Activity**: Keep an eye on the output and behavior of the scripts while they are running.
 4. **Remove or Disable**: After use, remove or disable the scripts to prevent unauthorized access.
 
-### Conclusion
+## Conclusion
 
 These Python scripts provide a range of functionalities for system monitoring and automation. Each script is designed with specific dependencies and outputs, making them useful for various purposes. However, it's crucial to use these scripts responsibly and within legal boundaries.
